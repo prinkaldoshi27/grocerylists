@@ -1,0 +1,51 @@
+/* Content.css */
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.item-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.item-checkbox {
+    margin-right: 10px;
+}
+
+.item-label {
+    flex-grow: 1;
+    font-size: 1em;
+}
+
+.item-delete-button {
+    background-color: #dc3545;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.item-delete-button:hover {
+    background-color: #c82333;
+}
+
+.no-items {
+    text-align: center;
+    font-size: 1.2em;
+    color: #666;
+}

@@ -1,0 +1,19 @@
+{
+  "items": [
+    {
+      "id": "61111",
+      "label": "Carrots",
+      "checked": false
+    },
+    {
+      "id": "611111",
+      "label": "Potato",
+      "checked": false
+    },
+    {
+      "id": "6111111",
+      "label": "Soap",
+      "checked": false
+    }
+  ]
+}
