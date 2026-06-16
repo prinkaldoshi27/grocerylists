@@ -1,70 +1,212 @@
-# Getting Started with Create React App
+# Grocery List
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and responsive grocery list application built with React and JSON Server. The application allows users to add, search, check off, and delete grocery items while persisting data through a mock REST API.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- Add grocery items
+- Delete grocery items
+- Mark items as completed
+- Search items instantly
+- Persistent data storage using JSON Server
+- Responsive and clean user interface
+- Real-time updates without page refresh
 
-### `npm start`
+## 🛠 Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Frontend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- JavaScript
+- CSS
 
-### `npm test`
+### Backend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- JSON Server
 
-### `npm run build`
+### API Communication
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Fetch API / Custom API Requests
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+grocery-list/
+│
+├── data/
+│   └── mydb.json             # Mock database
+│
+├── public/
+│
+├── src/
+│   ├── AddItem.js
+│   ├── AddItem.css
+│   ├── apiRequests.js
+│   ├── App.js
+│   ├── App.css
+│   ├── Content.js
+│   ├── Content.css
+│   ├── Footer.js
+│   ├── Header.js
+│   ├── Search.js
+│   ├── index.js
+│   └── logo.svg
+│
+├── package.json
+└── README.md
+```
 
-### `npm run eject`
+## ⚙️ Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Before running the project, make sure you have:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Node.js (v18+ recommended)
+- npm
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Check your installation:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+node -v
+npm -v
+```
 
-## Learn More
+## 📥 Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Clone the repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/prinkaldoshi27/grocery-list.git
+```
 
-### Code Splitting
+Navigate to the project directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+cd grocery-list
+```
 
-### Analyzing the Bundle Size
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm install
+```
 
-### Making a Progressive Web App
+Install JSON Server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install --save-dev json-server
+```
 
-### Advanced Configuration
+## ▶️ Running the Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Start the mock API server:
 
-### Deployment
+```bash
+npx json-server --watch data/mydb.json --port 3500
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The backend API will be available at:
 
-### `npm run build` fails to minify
+```text
+http://localhost:3500
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Example endpoint:
+
+```text
+http://localhost:3500/items
+```
+
+## ▶️ Running the Frontend
+
+Open a second terminal and start the React application:
+
+```bash
+npm start
+```
+
+The application will run at:
+
+```text
+http://localhost:3000
+```
+
+## 🏃 Running the Complete Application
+
+### Terminal 1
+
+Start the backend:
+
+```bash
+npx json-server --watch data/mydb.json --port 3500
+```
+
+### Terminal 2
+
+Start the frontend:
+
+```bash
+npm start
+```
+
+### URLs
+
+Frontend:
+
+```text
+http://localhost:3000
+```
+
+Backend:
+
+```text
+http://localhost:3500
+```
+
+## 🎯 How It Works
+
+1. Users enter a grocery item.
+2. The item is sent to the JSON Server API.
+3. The item is stored in `mydb.json`.
+4. Users can:
+   - Add new items
+   - Search existing items
+   - Mark items as completed
+   - Delete items
+5. Changes are automatically synced with the backend.
+
+## 📦 Production Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+The optimized files will be generated in the `build` folder.
+
+## 📜 Available Scripts
+
+Start development server:
+
+```bash
+npm start
+```
+
+Run tests:
+
+```bash
+npm test
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Eject configuration:
+
+```bash
+npm run eject
+```
+<img width="1918" height="930" alt="image" src="https://github.com/user-attachments/assets/4be2665c-ab5a-4a33-b419-41d03d6fd36c" />
